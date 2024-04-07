@@ -229,90 +229,35 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <!-- User Interaction & Editability Effects. -->
-      <div class="column"> 
-        <div class="content">
-          <h2 class="title is-3">User Interaction & Editability</h2>
-
-          <img src="./images/user_interactive.jpg" alt="User Interactive" style="height:100%;">
-        </div>
-      </div>
-      <!-- User Interaction & Editability Effects. -->
-      <!-- Diverse Colorization. -->
-      <div class="column">
-        <h2 class="title is-3">Diverse Results</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              We can synthesize diverse colorful references from Imagination Module, yielding diverse colorzation results.
-            </p>
-            <img src="./images/Diverse.png" alt="Diverse Colorization" style="height:100%;">
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- Diverse Colorization. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Colorization Gallery</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Comparison with the state-of-the-art automatic colorization methods on the COCO-Stuff vaidation dataset. 
+            Our method can generate more natural and photo-realistic colors. Please zoom in for the best view.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
+        <img src="./images/COCO_compare.png"
+             class="interpolation-image"
+             alt="COCO-Stuff comparison."/>
         <br/>
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Comparison with the state-of-the-art automatic colorization methods on the in-the-wild vaidation dataset which was collected randomly on the Internet. 
+            Our method can generate more natural and photo-realistic colors. Please zoom in for the best view.
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+        <img src="./images/In-the-wild_compare.png"
+             class="interpolation-image"
+             alt="COCO-Stuff comparison."/>
         <!--/ Re-rendering. -->
 
       </div>
