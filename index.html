@@ -201,31 +201,21 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We propose a framework for automatic colorization that allows for 
+            iterative editing and modifications. 
+            The core of our framework lies in an imagination module: 
+            by understanding the content within a grayscale image, 
+            we utilize a pre-trained image generation model to generate multiple images 
+            that contain the same content. 
+            These images serve as references for coloring, 
+            mimicking the process of human experts. 
+            As the synthesized images can be imperfect or different from the original grayscale image, 
+            we propose a Reference Refinement Module to select the optimal reference composition. 
+            Unlike most previous end-to-end automatic colorization algorithms, 
+            our framework allows for iterative and localized modifications of the colorization results 
+            because we explicitly model the coloring samples. 
+            Extensive experiments demonstrate the superiority of 
+            our framework over existing automatic colorization algorithms in editability and flexibility.
           </p>
         </div>
       </div>
