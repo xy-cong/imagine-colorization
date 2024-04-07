@@ -40,7 +40,9 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
 </head>
 <body>
 
@@ -189,15 +191,17 @@
         class="interpolation-image"
         alt="Interpolation end reference image."/>
         <h2 class="subtitle has-text-centered">
-          \textbf{Imagination Module and Reference Refinement Module.} In Imagination Module, given a grayscale input, 
-          we generate $N$ reference candidates $\mathbf{C}$, $N_1$ of which are conditioned on the canny edge of $\mathbf{X}$, 
-          and $N_2$ of which are conditioned on the HED boundary of $\mathbf{X}$, $N = N_1 + N_2$. 
-          In Reference Refinement Module \ref{subsec:Reference-Refinement-Module}, 
-          we first extract the segmentation $\mathbf{S}$ of $\mathbf{X}$. 
-          For each segment $\mathbf{S}^j$, we look for the best reference segment $\mathbf{R}\, \odot\, \mathbf{S}^j$ 
-          for the optimal reference $\mathbf{R}$ by selecting the nearest neighbor for $\mathbf{X} \, \odot \, \mathbf{S}^j$ 
-          among all reference candidates $\mathbf{C}_i\, \odot\, \mathbf{S}^j$ 
-          in terms of the difference in the robust and universe DINOv2 feature space.
+          <p>
+            \(\textbf{Imagination Module and Reference Refinement Module.}\) In Imagination Module, given a grayscale input, 
+            we generate \(N\) reference candidates \(\mathbf{C}\), \(N_1\) of which are conditioned on the canny edge of \(\mathbf{X}\), 
+            and \(N_2\) of which are conditioned on the HED boundary of \(\mathbf{X}\), \(N = N_1 + N_2\). 
+            In Reference Refinement Module, 
+            we first extract the segmentation \(\mathbf{S}\) of \(\mathbf{X}\). 
+            For each segment \(\mathbf{S}^j\), we look for the best reference segment \(\mathbf{R}\, \odot\, \mathbf{S}^j\) 
+            for the optimal reference \(\mathbf{R}\) by selecting the nearest neighbor for \(\mathbf{X} \, \odot \, \mathbf{S}^j\) 
+            among all reference candidates \(\mathbf{C}_i\, \odot\, \mathbf{S}^j\) 
+            in terms of the difference in the robust and universe DINOv2 feature space.
+          </p>          
         </h2>
       </div>
     </div>
