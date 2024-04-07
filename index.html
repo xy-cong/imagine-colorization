@@ -185,12 +185,19 @@
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Imagination Module</h2>
         <img src="./images/Imagine.png"
         class="interpolation-image"
         alt="Interpolation end reference image."/>
         <h2 class="subtitle has-text-centered">
-          \(E=mc^2\)
+          \textbf{Imagination Module and Reference Refinement Module.} In Imagination Module, given a grayscale input, 
+          we generate $N$ reference candidates $\mathbf{C}$, $N_1$ of which are conditioned on the canny edge of $\mathbf{X}$, 
+          and $N_2$ of which are conditioned on the HED boundary of $\mathbf{X}$, $N = N_1 + N_2$. 
+          In Reference Refinement Module \ref{subsec:Reference-Refinement-Module}, 
+          we first extract the segmentation $\mathbf{S}$ of $\mathbf{X}$. 
+          For each segment $\mathbf{S}^j$, we look for the best reference segment $\mathbf{R}\, \odot\, \mathbf{S}^j$ 
+          for the optimal reference $\mathbf{R}$ by selecting the nearest neighbor for $\mathbf{X} \, \odot \, \mathbf{S}^j$ 
+          among all reference candidates $\mathbf{C}_i\, \odot\, \mathbf{S}^j$ 
+          in terms of the difference in the robust and universe DINOv2 feature space.
         </h2>
       </div>
     </div>
